@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árvore de Probabilidades</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="box">
+        <p>Árvore de Probabilidades</p>
+        <div class="tree">
+            <ul>
+                <li>
+                    <span class="node">Pai</span>
+                    <div class="input-section">
+                        <input id="root" class="txt" placeholder="Digite algo..." value="200" oninput="updateAllChildren()">
+                    </div>
+                    <ul>
+                        <li>
+                            <span class="node">Requisitos</span>
+                            <ul>
+                                <li><span class="node">Quilos:</span>
+                                    <ul>
+                                        <li><span class="node">Clima:</span>
+                                            <ul>
+                                                <li><span class="node">Custo:</span>
+                                                    <ul>
+                                                        <li><span class="node">Receita:</span>
+                                                            <ul>
+                                                                <li><span class="node">Lucro:</span></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="node">Filho 1</span>
+                            <div class="input-section">
+                                <input id="child1" class="txt" placeholder="Digite algo..." value="20" oninput="updateChild(1)" >
+                            </div>
+                            <ul>
+                                <li><span class="node">Dia de Sol</span>
+                                    <ul>
+                                        <li><span id="custo1" class="node"></span>
+                                            <ul>
+                                                <li><span id="receita1" class="node"></span>
+                                                    <ul>
+                                                        <li><span id="lucro1" class="node"></span></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><span class="node">Dia de Chuva</span>
+                                    <ul>
+                                        <li><span id="custo1Chuva" class="node"></span>
+                                            <ul>
+                                                <li><span id="receita1Chuva" class="node"></span>
+                                                    <ul>
+                                                        <li><span id="lucro1Chuva" class="node"></span></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="node">Filho 2</span>
+                            <div class="input-section">
+                                <input id="child2" class="txt" placeholder="Digite algo..." value="40" oninput="updateChild(2)" >
+                            </div>
+                            <ul>
+                                <li><span class="node">Dia de Sol</span>
+                                    <ul>
+                                        <li><span id="custo2"class="node"></span>
+                                            <ul>
+                                                <li><span id="receita2" class="node"></span>
+                                                    <ul>
+                                                        <li><span id="lucro2" class="node"></span></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><span class="node">Dia de Chuva</span>
+                                    <ul>
+                                        <li><span id="custo2Chuva"class="node"></span>
+                                            <ul>
+                                                <li><span id="receita2Chuva" class="node"></span>
+                                                    <ul>
+                                                        <li><span id="lucro2Chuva" class="node"></span></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="node">Filho 3</span>
+                            <div class="input-section">
+                                <input id="child3" class="txt" placeholder="Digite algo..." value="60" oninput="updateChild(3)">
+                            </div>
+                            <ul>
+                                <li><span class="node">Dia de Sol</span>
+                                    <ul>
+                                        <li><span id="custo3" class="node"></span>
+                                            <ul>
+                                                <li><span id="receita3" class="node"></span>
+                                                    <ul>
+                                                        <li><span id="lucro3" class="node"></span></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><span class="node">Dia de Chuva</span>
+                                    <ul>
+                                        <li><span id="custo3Chuva" class="node"></span>
+                                            <ul>
+                                                <li><span id="receita3Chuva" class="node"></span>
+                                                    <ul>
+                                                        <li><span id="lucro3Chuva" class="node"></span></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="node">Filho 4</span>
+                            <div class="input-section">
+                                <input id="child4" class="txt" placeholder="Digite algo..." value="80" oninput="updateChild(4)">
+                            </div>
+                            <ul>
+                                <li><span class="node">Dia de Sol</span>
+                                    <ul>
+                                        <li><span id="custo4" class="node"></span>
+                                            <ul>
+                                                <li><span id="receita4" class="node"></span>
+                                                    <ul>
+                                                        <li><span id="lucro4" class="node"></span></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><span class="node">Dia de Chuva</span>
+                                    <ul>
+                                        <li><span id="custo4Chuva" class="node"></span>
+                                            <ul>
+                                                <li><span id="receita4Chuva" class="node"></span>
+                                                    <ul>
+                                                        <li><span id="lucro4Chuva" class="node"></span></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
